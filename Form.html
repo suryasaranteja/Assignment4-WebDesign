@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Feedback</title>
+  <style>
+     form {
+            background-color: beige;
+            padding: 30px;
+            width: 550px;
+			margin-left: 550px;
+        }
+        .control {
+            margin-bottom: 20px;
+        }
+        label {
+            width: 200px;
+            float: left;
+        }
+
+		table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    table, th, td {
+        border: 1px solid #000;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+
+  </style>
+ </head>
+ <body class="container">
+	 <main>
+		<center>
+	 <h2>Feeback</h2>
+	 <h3>Love something? Hate something? Let us know!</h3>
+		 Note : Fields marked with an asterisk(*) are mandatory
+		</center>
+		 <br><br>
+		 <form  action="#" id="my-form" name="myForm">
+			<div class="control">
+				<label>Title*:</label>
+			    <input type="radio" name="title" id="miss" value="miss" required="required"/>Miss
+			    <input type="radio" name="title" id="mr" value="mr" required="required"/>Mr.
+			    <input type="radio" name="title" id="mrs" value="mrs" required="required"/>Mrs.
+			</div>
+			<div id="error_title" style="display: none; color: red;">
+				Please select a title
+			</div>
+			
+			<div class="control">
+				<label for="firstName">First Name*:</label>
+			    <input type="text" name="firstName" id="firstName" placeholder="First Name" required/>
+			</div>
+			<div id="error_firstName" style="display: none; color: red;">
+				First Name is not valid. Please enter again !
+			</div>
+			<br><br>
+
+			 <div class="contol">
+				<label for="lastName">Last Name*:</label>
+			    <input type="text" name="lastName" id="lastName" placeholder="Last Name" required/>
+			 </div>	
+			 <div id="error_lastName" style="display: none; color: red;">
+				Last Name is not valid. Please enter again !
+			</div>
+			<br><br>
+
+			<div class="control">
+				<label for="emailId">Email Id*:</label>
+			    <input type="text" name="emailId" id="emailId" placeholder="yourname@domain.com" required/>
+			</div>
+			<div id="error_emailId" style="display: none; color: red;">
+				Invalid Email Id, Please enter a valid Northeastern Email Id .
+			</div>
+			<br><br>
+			
+			<div class="control">
+				<label for="phoneNumber">Phone Number*:</label>
+			    <input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" required/>
+			</div>
+			<div id="error_phoneNumber" style="display: none; color: red;">
+				Invalid Phone Number. Please enter a valid Phone Number starting with 857<br> exmaple : 857-XXX-XXXX.
+			</div>
+			<br><br>
+
+			<div class="control">
+				<label for="streetAddress1">Street Address 1*:</label>
+			    <input type="text" name="streetAddress1" id="streetAddress1" placeholder="Your address" required/>
+			</div>
+			<div id="error_streetAddress1" style="display: none; color: red;">
+				Please enter Street Address !
+			</div>
+             
+			<br>
+			<div class="control">
+				<label for="streetAddress2">Street Address 2:</label>
+			    <input type="text" name="streetAddress2" id="streetAddress2" placeholder="Your street address 2 (optional)" />
+			</div>
+
+			<br><br>
+			 
+			<div class="control">
+                <label for="city">City*:</label>
+			    <input type="text" name="city" id="city" placeholder="City Name" required/>
+			</div>
+			<div id="error_city" style="display: none; color: red;">
+				Please enter your city !
+			</div>
+
+			<br>
+
+			<div class="control">
+                <label for="state">State*:</label>
+			    <input type="text" name="state" id="state" placeholder="State Name" required/>
+			</div>
+			<div id="error_state" style="display: none; color: red;">
+				Please enter your State Name !
+			</div>
+
+			<br>
+
+
+			<div class="control">
+                <label for="zipcode">ZipCode*:</label>
+			    <input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" required/>
+			</div>
+			<div id="error_zipcode" style="display: none; color: red;">
+				Invalid zipcode, Please enter valid zipcode again !
+			</div>
+			<br><br>
+			
+             <div class="control">
+				<label for="source">How did you hear*:</label>
+			    <input type='checkbox' name="source" id="source" value="facebook" /> Facebook
+                <input type='checkbox' name="source" id="source" value="google" /> Google
+                <input type='checkbox' name="source" id="source" value="yelp" /> Yelp 
+			 </div>
+			 <div id="error_source" style="display: none; color: red;">
+				 Please select any one field.
+			</div>
+			<br><br> 
+             
+			<div class="control">
+				<label for="comments">Comments*:</label>
+			   <textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25" required></textarea>
+			</div>
+			<div id="error_text" style="display: none; color: red;">
+				Please add a comment here !
+			</div>
+			<br><br>
+
+			<div class="control">
+				<label for="rating">Rate Us*:</label>
+				<select name="rating" id="rating">
+					<option value=""></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div id="error_rating" style="display: none; color: red;">
+				Please select a rating.
+			</div>
+
+
+			<div id="checkbox-container" style="display: none;">
+				<input type="checkbox" name="enableText" id="enableText"> Rating Comment*
+			</div>
+			
+
+
+			<div id="text-field-container" style="display: none;">
+				<label for="textField">Please add your comment*:</label>
+				<input type="text" name="textField" id="textField" placeholder="Enter text" required>
+			</div>
+			<div id="error_textField" style="display: none; color: red;">
+				Please enter text in the text field .
+			</div>
+			
+	 </main>
+
+	
+	<center>
+	<input type="Submit" value="Submit" name="Submit">
+	<input type="reset" value="reset" name="reset">
+</center>
+
+</form>
+
+<br><br>
+<div id="resultsTable" name="resultsTable"style="display: none;">
+	<h2>Submitted Data</h2>
+<table id="myTable">
+	<thead>
+	<tr>
+		<th>Name</th>
+		<th>Email id</th>
+		<th>Phone Number</th>
+		<th>Street Address 1</th>
+		<th>Street Address 2</th>
+		<th>City</th>
+		<th>State</th>
+		<th>Zipcode</th>
+		<th>Comment</th>
+		<th>Rating</th>
+		<th>Rating Comment</th>
+	</tr>
+</thead>
+<tbody>
+	
+</tbody>
+</table>
+</div>
+
+ <script src="script.js"> </script>
+ </body>
+</html>
